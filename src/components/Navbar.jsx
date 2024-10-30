@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <nav id="navbar" className="flex items-center justify-between py-4 px-8 lg:px-0 max-w-screen-md mx-auto ">
       <NavLink to="/" className={({ isActive }) => (isActive ? 'text-primary' : 'text-text')}>
-        <img className="w-40 h-auto" src="/public/asset/logo.png" alt="logo" />
+        <img className="w-40 h-auto" src="/public/asset/logo.png" alt="logo Yeraldin" />
       </NavLink>
 
      
@@ -78,7 +78,7 @@ const Navbar = () => {
         <li className="py-2 px-4">
           <button
             onClick={openWhatsapp}
-            className="bg-primary text-background px-6 py-2 rounded shadow-sm shadow-text hover:bg-text hover:text-background transition duration-300"
+            className="bg-primary text-background px-4 py-2 rounded shadow-sm shadow-text hover:bg-text hover:text-background transition duration-300"
           >
             Contacto
           </button>
