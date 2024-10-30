@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 
 const UxProject = () => {
     const projects = [
-        {
-            title: "App Velvet Blossom",
-            imgSrc: "/asset/Frame 1.png",
-            altText: "UX/UI Projects",
-            description: "Descripción de la app Velvet Blossom",
-            projectLink: "/velvet-blossom" 
-        },
+        //{
+           // title: "App Velvet Blossom",
+          //  imgSrc: "/asset/Frame 1.png",
+          //  altText: "UX/UI Projects",
+          //  description: "Descripción de la app Velvet Blossom",
+          //  projectLink: "/velvet-blossom" 
+      //  },
         {
             title: "Web Shaik Asesores",
             imgSrc: "/asset/Cover.png",
