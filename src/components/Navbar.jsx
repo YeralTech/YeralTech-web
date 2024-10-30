@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <nav id="navbar" className="flex items-center justify-between py-4 px-8 lg:px-0 max-w-screen-md mx-auto ">
       <NavLink to="/" className={({ isActive }) => (isActive ? 'text-primary' : 'text-text')}>
-        <img className="w-40 h-auto" src="/logo.png" alt="logo" />
+        <img className="w-40 h-auto" src="/public/asset/logo.png" alt="logo" />
       </NavLink>
 
      
