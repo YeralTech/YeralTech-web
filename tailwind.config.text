@@ -1,0 +1,23 @@
+// tailwind.config.js
+export default {
+  content: [
+    "./index.html", // Asegúrate de incluir la ruta correcta
+    "./src/**/*.{js,jsx,ts,tsx}", // Incluye archivos de src
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: '#6D5CCF',   
+        secondary: '#E4E7FB', // Color secundario
+        background: '#FFFFFF', // Fondo
+        text: '#302B53',      // Color del texto
+        hover: '#7E77DD',     // Hover del botón primario
+      },
+      fontFamily: {
+        sans: ['Nunito Sans', 'sans-serif'],  // Fuente principal para párrafos
+        raleway: ['Raleway', 'sans-serif'],   // Fuente para títulos
+      },
+    },
+  },
+  plugins: [],
+};
