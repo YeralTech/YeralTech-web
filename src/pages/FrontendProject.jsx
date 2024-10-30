@@ -31,7 +31,7 @@ const FrontendProjects = () => {
             <section id="hero-section" className="relative h-60 ">
                 <img className="absolute inset-0 w-full h-full object-cover" src="/asset/freepik__expand__87754.png" alt="imagen de fondo" />
                 <div className="absolute inset-0 bg-text bg-opacity-80 flex items-center justify-center">
-                    <h1 className="font-raleway text-white text-5xl font-bold">Proyectos Frontend</h1>
+                    <h1 className="font-raleway text-white text-5xl text-center font-bold">Proyectos Frontend</h1>
                 </div>
             </section>
 
