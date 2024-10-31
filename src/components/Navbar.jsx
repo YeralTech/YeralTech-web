@@ -25,7 +25,7 @@ const Navbar = () => {
   const openWhatsapp = () => window.open(whatsapp, '_blank');
 
   return (
-    <nav id="navbar" className="flex items-center justify-between py-4 px-8 lg:px-0 max-w-screen-md mx-auto ">
+    <nav id="navbar" className="flex items-center justify-between py-4 px-8 lg:px-0 max-w-screen-md mx-auto text-lg">
       <NavLink to="/" className={({ isActive }) => (isActive ? 'text-primary' : 'text-text')}>
       <img className="w-40 h-auto" src="/asset/logo.png" alt="logo Yeraldin" />
 
@@ -51,10 +51,10 @@ const Navbar = () => {
       <ul
         className={`${
           menuOpen ? 'flex' : 'hidden'
-        } flex-col absolute top-10 w-80  text-center rounded-b-md py-6 bg-white shadow-md z-20 md:left-52 md:ml-36 lg:static lg:flex lg:flex-row lg:items-center lg:gap-2 lg:bg-transparent lg:shadow-none lg:w-auto`}
+        } flex-col absolute top-16 w-80  text-center rounded-b-md py-6 bg-white shadow-md z-20 md:left-52 md:ml-36 lg:static lg:flex lg:flex-row lg:items-center lg:gap-2 lg:bg-transparent lg:shadow-none lg:w-auto`}
       >
         <li className="text-text hover:text-primary transition duration-300 py-2 px-2">
-          <NavLink to="/about" className={({ isActive }) => (isActive ? 'text-primary' : 'text-text')}>
+          <NavLink to="/about" className={({ isActive }) => (isActive ? 'text-primary' : 'text-text ')}>
             Acerca de mí
           </NavLink>
         </li>
