@@ -29,7 +29,7 @@ const About = () => {
             <img className="w-96 drop-shadow-xl" src="/asset/rb_28004 1.png" alt=""/>
         </div>
     </section>
-    <section id="aboutme-section" className="flex flex-col  justify-center items-center py-20">
+   {/*<section id="aboutme-section" className="flex flex-col  justify-center items-center py-20">
         <h2 className="font-raleway font-bold text-3xl">Especialidad </h2>
         
         <div className="flex flex-col py-6 items-center justify-center gap-8 lg:flex-row lg:px-20" id="about-me-container">
@@ -52,7 +52,7 @@ const About = () => {
             </div>
             <img className="w-96 drop-shadow-xl" src="/asset/rb_3041 (2).png" alt=""/>
         </div>
-    </section>
+    </section>*/}
     <section className="flex flex-col bg-background justify-center items-center py-20">
         <h2 className="font-raleway text-text font-bold text-3xl pb-8">Stack Tecnológico</h2>
         <div className='flex gap-3 text-5xl  text-primary drop-shadow-lg drop-shadow-text'>
