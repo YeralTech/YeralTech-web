@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 const AboutSection = () => {
     // Ruta del CV
-    const downloadCv = '/asset/arq.png';
+    const downloadCv = '/public/asset/Yeraldin Espinosa-CV .docx.pdf';
 
     return (
         <>
