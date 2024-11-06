@@ -5,7 +5,7 @@ const VelvetBlossom = () => {
     <>
         <section className='flex justify-center bg-velvet'>
                     <div className=''>
-                    <img className='h-96' src="/asset/Frame 1.png" alt="" />
+                    <img className='' src="/asset/Frame 1.png" alt="" />
                     </div>
         </section> 
         <section className='flex justify-center items-center py-20'>
@@ -13,7 +13,7 @@ const VelvetBlossom = () => {
             <h2 className='text-2xl font-bold pb-6'>Descripción del proyecto</h2>
             <p>Velvet Blossom es una floristería en línea diseñada para usuarios que necesitan comprar flores en situaciones inesperadas, como aniversarios olvidados o celebraciones de última hora. La plataforma ofrece una experiencia rápida y eficiente con opciones de entrega el mismo día. Los usuarios principales son personas ocupadas, típicamente hombres, que buscan soluciones inmediatas para momentos especiales.</p>
             </div>
-        <img src="/asset/iPhone 13 Pro.png" alt="" />
+        <img className="w-80" src="/public/asset/iPhone 13 Pro.png" alt="" />
             
         </section>
         <section className='flex justify-center items-center gap-10 py-20 bg-velvet px-10 lg:gap-32'>
@@ -69,12 +69,12 @@ const VelvetBlossom = () => {
         <img src="/public/asset/Frame 34.png" alt="" />
         </section>
         <section className="flex flex-col justify-center items-center py-20 bg-velvet">
-          <h2 className="text-2xl font-bold text-white pb-6">Wireframe</h2>
+          <h2 className="text-2xl font-bold text-white pb-6">Wireframe Baja Fidelidad</h2>
           <img className="" src="/asset/wireframe-baja.png" alt="" />
         </section>
         <section className="flex flex-col justify-center items-center py-20">
-          <h2 className="text-2xl font-bold text-text pb-6">Wireframe</h2>
-          <img className="" src="/asset/wireframe.png" alt="" />
+          <h2 className="text-2xl font-bold text-text pb-6">Wireframe Alta Fidelidad</h2>
+          <img className="px-60" src="/public/asset/Group 25.png" alt="" />
         </section>
         <Footer/>  
     </>
