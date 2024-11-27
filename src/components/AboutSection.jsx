@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 const AboutSection = () => {
     // Ruta del CV
-    const downloadCv = '/public/asset/Yeraldin Espinosa-CV .docx.pdf';
+    const downloadCv = '/public/asset/Yeraldin Espinosa UX-UI.pdf';
 
     return (
         <>
@@ -16,7 +16,7 @@ const AboutSection = () => {
                         <div id="buttons-container" className="flex text-center">
                             <a
                                 href={downloadCv}
-                                download="Curriculum_Yeraldin.pdf" 
+                                download="CV-YeraldinEspinosa.pdf" 
                                 className="bg-primary w-40 py-2 text-background rounded-md mr-4 shadow-sm shadow-text transition duration-300 hover:bg-text"
                             >
                                 Descargar CV

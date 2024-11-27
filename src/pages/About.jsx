@@ -18,7 +18,7 @@ const About = () => {
   
     <section id="aboutme-section" className="flex flex-col bg-secondary py-20 justify-center items-center">
         <h2 className="text-center font-raleway font-bold text-3xl">Acerca de mí </h2>
-        <div className="flex flex-col py-6 items-center justify-center gap-8 lg:flex-row lg:px-20" id="about-me-container ">
+        <div className="flex flex-col py-6 items-center justify-center lg:px-0 max-w-screen-xl mx-auto flex-col gap-8 lg:flex-row lg:px-20" id="about-me-container ">
             <div className="flex flex-col px-20 " id="about-me-textcontainer">
                 <p className="pb-8 text-xl">¡Hola! Soy Diseñadora UX/UI con una trayectoria que comenzó en ventas, lo que me ha proporcionado una comprensión profunda de las necesidades y expectativas del cliente. Esta experiencia me permite diseñar productos digitales que no solo se centran en la estética, sino que también crean soluciones reales para problemas específicos, mejorando así la experiencia del usuario.</p>
                 <div id="buttons-container" className="flex">
