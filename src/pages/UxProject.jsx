@@ -4,7 +4,7 @@ const UxProject = () => {
     const projects = [
         {
             title: "TicTeams",
-            imgSrc: "/public/asset/cover-ticteams.png",
+            imgSrc: "/asset/cover-ticteams.png",
             altText: "UX/UI Projects",
             description: "Diseño de Aplicación de floristeria ",
             projectLink: "/ticteams",
