@@ -59,7 +59,7 @@ const ShaikProject = () => {
             </div>
         </section>
         <section className="flex  flex-col justify-center items-center py-20 bg-shaik">
-        <h2 className="font-bold text-2xl text-white pb-10">Mockup</h2>
+        <h2 className="font-bold text-2xl text-white pb-10">Insight</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 text-shaik font-bold text-2xl gap-8 max-w-screen-lg justify-center px-20 lg:grid-cols-2  ">
                
                 <img className="rounded-md shadow-sm shadow-secondary" src="/asset/screencapture-shaikasesores-2024-10-25-16_38_18.png" alt="" />

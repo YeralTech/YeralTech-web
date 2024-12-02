@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom';
 const UxProject = () => {
     const projects = [
         {
+            title: "TicTeams",
+            imgSrc: "/public/asset/cover-ticteams.png",
+            altText: "UX/UI Projects",
+            description: "Diseño de Aplicación de floristeria ",
+            projectLink: "/ticteams",
+            webLink:"https://ticteams.com/"
+        },
+        {
             title: "App Velvet Blossom",
             imgSrc: "/asset/Frame 1.png",
             altText: "UX/UI Projects",
@@ -14,7 +22,8 @@ const UxProject = () => {
             imgSrc: "/asset/Cover.png",
             altText: "UX/UI Projects",
             description: "Diseño de Página web de empresa de asesoría financiera ",
-            projectLink: "/shaik-asesores" 
+            projectLink: "/shaik-asesores",
+            webLink: "https://shaikasesores.com/"
         },
        
     ];
@@ -34,12 +43,22 @@ const UxProject = () => {
                             <img src={project.imgSrc} alt={project.altText} className="h-60 rounded-md" />
                             <h3 className="py-4 font-bold text-text text-center text-2xl">{project.title}</h3>
                             <p className="py-4 text-text text-center text-base">{project.description}</p>
+                            <div className='gap-2 flex'>
+                                <Link to={project.webLink}>
+                                <button className="bg-primary w-auto px-3 py-2 text-background rounded-md shadow-sm shadow-text hover:bg-text transition duration-300">
+                                    Ver Sitio Web
+                                </button>
+                            </Link>
                             <Link to={project.projectLink}>
-                                <button className="bg-primary w-48 py-2 text-background rounded-md shadow-sm shadow-text hover:bg-text transition duration-300">
+                                <button className="bg-primary w-auto px-3 py-2 text-background rounded-md shadow-sm shadow-text hover:bg-text transition duration-300">
                                     Ver Caso de Estudio
                                 </button>
                             </Link>
+                            </div>
+                           
+                            
                         </div>
+                        
                     ))}
                 </div>
             </section>

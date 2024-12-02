@@ -15,6 +15,9 @@ export default {
         velvet: '#3A4D38',
         shaik: '#0A4870',
         stext: '#FFCE4A',
+        tic:'#114E50',
+        bgtic:'#0C7679',
+        bglight: 'rgba(12, 118, 121, 0.12)'
        
       },
       backgroundImage: {
