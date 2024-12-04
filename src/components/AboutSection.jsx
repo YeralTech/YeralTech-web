@@ -29,7 +29,7 @@ const AboutSection = () => {
                             
                         </div>
                     </div>
-                    <img className="w-96 drop-shadow-xl" src="/asset/rb_28004 1.png" alt="" />
+                    <img className="w-96 drop-shadow-xl" src="/" alt="" />
                 </div>
             </section>
         </>
