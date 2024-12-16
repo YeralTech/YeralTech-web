@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yeral.tech/sitemap.xml

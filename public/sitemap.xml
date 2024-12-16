@@ -6,11 +6,25 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
-  <loc>https://yeral.tech/</loc>
-  <lastmod>2024-12-16T16:36:38+00:00</lastmod>
-</url>
-
-
+        <loc>https://yeral.tech/</loc>
+        <lastmod>2024-12-16T16:36:38+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://yeral.tech/about</loc>
+        <lastmod>2024-12-16T16:36:38+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://yeral.tech/projects</loc>
+        <lastmod>2024-12-16T16:36:38+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://yeral.tech/contact</loc>
+        <lastmod>2024-12-16T16:36:38+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://yeral.tech/ux-project</loc>
+        <lastmod>2024-12-16T16:36:38+00:00</lastmod>
+    </url>
+    <!-- Añadir más URLs de las rutas de tu aplicación -->
 </urlset>
