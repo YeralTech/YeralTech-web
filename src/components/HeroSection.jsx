@@ -16,7 +16,7 @@ const HeroSection = () => {
       ¡Hola! Soy Yeraldin
     </h1>
     <p id="hero-description" className="text-text font-regular font-sans text-xl pb-6 ">
-      Soy diseñadora UX/UI. Mi misión es crear experiencias que sean tanto
+      Soy diseñadora UX/UI en Panamá. Mi misión es crear experiencias que sean tanto
       funcionales como sorprendentes. Da un vistazo a mis proyectos y veamos
       cómo puedo ayudarte a innovar.
     </p>
@@ -25,6 +25,7 @@ const HeroSection = () => {
         id="hero-meeting-button"
         onClick={AddMeetClick}
         className="bg-primary w-40 py-2 text-background rounded-md mr-4 shadow-sm shadow-text hover:bg-text transition duration-300"
+       aria-label="Agenda una cita de 30 minutos con Yeraldin Espinosa"
       >
         Agenda una cita
       </button>
@@ -37,7 +38,7 @@ const HeroSection = () => {
       id="hero-image"
       className="rounded-full relative z-10 border-2 border-primary w-60 top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
       src="/asset/image0-nA2741fkc-transformed.png"
-      alt="logo"
+      alt="Yeraldin Espinosa - Diseñadora UX/UI en Panamá"
     />
   </div>
   </div>

@@ -2,17 +2,18 @@ import { Link } from 'react-router-dom';
 const AboutSection = () => {
     // Ruta del CV
     const downloadCv = '/public/asset/Yeraldin Espinosa UX-UI.pdf';
+    const imgAbout = '/public/asset/rb_28004 1.png'
 
     return (
         <>
             <section id="aboutme-section" className="flex flex-col bg-secondary justify-center items-center py-20">
                 <h2 className="font-raleway font-bold text-3xl">Acerca de mí</h2>
                 <div className="flex flex-col max-w-screen-lg py-6 items-center justify-center gap-8 lg:flex-row" id="about-me-container">
-                    <div className="flex flex-col px-10" id="about-me-textcontainer">
-                        <p className="pb-8 text-xl">
-                            Soy diseñadora UX/UI. Mi misión es crear experiencias que sean tanto funcionales como sorprendentes.
-                            Da un vistazo a mis proyectos y veamos cómo puedo ayudarte a innovar.
+                    <div className="flex flex-col px-10 " id="about-me-textcontainer">
+                        <p className="pb-8 text-text text-xl">
+                            Soy diseñadora UX/UI apasionada por crear experiencias digitales intuitivas y funcionales. Mi formación en herramientas de diseño como Figma, junto con mi experiencia previa en ventas, me ha permitido desarrollar habilidades clave en comunicación y resolución de problemas, lo que me facilita comprender las necesidades de los usuarios y colaborar eficazmente con equipos multidisciplinarios.
                         </p>
+                     
                         <div id="buttons-container" className="flex text-center">
                             <a
                                 href={downloadCv}
@@ -29,7 +30,7 @@ const AboutSection = () => {
                             
                         </div>
                     </div>
-                    <img className="w-96 drop-shadow-xl" src="" alt="" />
+                    <img className="w-96 drop-shadow-xl" src={imgAbout} alt="" />
                 </div>
             </section>
         </>

@@ -17,10 +17,15 @@ const About = () => {
     <>
   
     <section id="aboutme-section" className="flex flex-col bg-secondary py-20 justify-center items-center">
-        <h2 className="text-center font-raleway font-bold text-3xl">Acerca de mí </h2>
-        <div className="flex flex-col py-6 items-center justify-center lg:px-0 max-w-screen-xl mx-auto flex-col gap-8 lg:flex-row lg:px-20" id="about-me-container ">
-            <div className="flex flex-col px-20 " id="about-me-textcontainer">
-                <p className="pb-8 text-xl">¡Hola! Soy Diseñadora UX/UI con una trayectoria que comenzó en ventas, lo que me ha proporcionado una comprensión profunda de las necesidades y expectativas del cliente. Esta experiencia me permite diseñar productos digitales que no solo se centran en la estética, sino que también crean soluciones reales para problemas específicos, mejorando así la experiencia del usuario.</p>
+        <h2 className="text-text text-center font-raleway font-bold text-4xl">Acerca de Mí </h2>
+        <div className="flex flex-col py-10 items-center justify-center lg:px-0 max-w-screen-xl mx-auto flex-col gap-8 lg:flex-row lg:px-20" id="about-me-container ">
+            <div className="flex flex-col px-10 text-text " id="about-me-textcontainer">
+                <p className="pb-3 text-xl">Soy diseñadora UX/UI apasionada por crear experiencias digitales intuitivas y funcionales. Mi formación en herramientas de diseño como Figma, junto con mi experiencia previa en ventas, me ha permitido desarrollar habilidades clave en comunicación y resolución de problemas, lo que me facilita comprender las necesidades de los usuarios y colaborar eficazmente con equipos multidisciplinarios. </p>
+                <p className="pb-3 text-xl">He trabajado en el rediseño de interfaces y mejora de la usabilidad de páginas web, transformando ideas complejas en soluciones visuales sencillas y efectivas. Mi enfoque está en asegurar que cada producto digital no solo sea estéticamente atractivo, sino que también resuelva problemas reales y proporcione una experiencia fluida y agradable. </p>
+
+                <p className="pb-8 text-xl">Mi pasión por el aprendizaje continuo me mantiene siempre explorando nuevas metodologías y tecnologías en UX/UI y desarrollo frontend. Busco colaborar con equipos creativos para crear productos digitales centrados en el usuario que generen resultados medibles y mejoren la interacción digital.</p>    
+               
+               
                 <div id="buttons-container" className="flex">
                     <button className="bg-primary w-40 py-2 text-background rounded-md mr-4 shadow-sm shadow-text transition duration-300 hover:bg-text">Descargar CV</button>
                    
@@ -55,7 +60,7 @@ const About = () => {
     </section>*/}
     <section className="flex flex-col bg-background justify-center items-center py-20">
         <h2 className="font-raleway text-text font-bold text-3xl pb-8">Stack Tecnológico</h2>
-        <div className='flex gap-3 text-5xl  text-primary drop-shadow-lg drop-shadow-text'>
+        <div className='flex gap-3 text-7xl  text-hover drop-shadow-lg drop-shadow-text'>
             <SiAdobeillustrator />
             <SiAdobephotoshop />
             <IoLogoFigma />

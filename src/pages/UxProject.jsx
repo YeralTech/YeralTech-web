@@ -5,8 +5,8 @@ const UxProject = () => {
         {
             title: "TicTeams",
             imgSrc: "/asset/cover-ticteams.png",
-            altText: "UX/UI Projects",
-            description: "Diseño de Aplicación de floristeria ",
+            altText: "Diseño UX/UI para Ticteams, empresa de desarrollo de software Panamá",
+            description: "Rediseño de página web para Ticteams, empresa de Desarrollo de Software ",
             projectLink: "/ticteams",
             webLink:"https://ticteams.com/"
         },
@@ -20,7 +20,7 @@ const UxProject = () => {
         {
             title: "Web Shaik Asesores",
             imgSrc: "/asset/Cover.png",
-            altText: "UX/UI Projects",
+            altText: "Diseño UX/UI de Página Web Shaik Asesores Panamá ",
             description: "Diseño de Página web de empresa de asesoría financiera ",
             projectLink: "/shaik-asesores",
             webLink: "https://shaikasesores.com/"

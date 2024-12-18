@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <nav id="navbar" className="flex items-center justify-between py-4 px-8 lg:px-0 max-w-screen-lg mx-auto text-lg">
-      <NavLink to="/" className={({ isActive }) => (isActive ? 'text-primary' : 'text-text')}>
+      <NavLink to="/" className={({ isActive }) => (isActive ? 'text-primary font-bold' : 'text-text')}>
       <img className="w-40 h-auto" src="/asset/logo.png" alt="logo Yeraldin" />
 
       </NavLink>
@@ -54,14 +54,14 @@ const Navbar = () => {
         } flex-col absolute top-16 w-80  text-center rounded-b-md py-2 bg-white shadow-md z-20 md:left-52 md:ml-36 lg:static lg:flex lg:flex-row lg:items-center lg:gap-2 lg:bg-transparent lg:shadow-none lg:w-auto`}
       >
         <li className="text-text hover:text-primary transition duration-300 py-2 px-2">
-          <NavLink to="/about" className={({ isActive }) => (isActive ? 'text-primary' : 'text-text ')}>
+          <NavLink to="/about" className={({ isActive }) => (isActive ? 'text-primary underline' : 'text-text ')}>
             Acerca de mí
           </NavLink>
         </li>
         <li className="relative py-2 px-4">
           <button
             onClick={toggleDropdown}
-            className="text-text hover:text-primary transition duration-300 focus:outline-none"
+            className="text-text hover:text-primary transition duration-300 active:underline  focus:outline-none"
           >
             Proyectos
           </button>
