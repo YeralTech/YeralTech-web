@@ -19,7 +19,7 @@ const ContactSection = () => {
 
   return (
     <section id="form-section" className="py-20 flex flex-col justify-center items-center gap-8 max-w-screen-lg mx-auto lg:flex-row">
-      <h2 className="font-bold text-5xl text-center lg:w-1/2">¡Lleva tu diseño al siguiente nivel! Contáctame.</h2>
+      <h2 className="font-bold text-5xl text-text text-center lg:w-1/2">¡Lleva tu diseño al siguiente nivel! Contáctame.</h2>
       <form 
         action="https://formspree.io/f/meoqenyb"
         method="POST"

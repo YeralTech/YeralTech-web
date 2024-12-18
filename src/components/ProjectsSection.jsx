@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ProjectsSection = () => {
     return (
         <section id="projects-section" className="bg-background text-text flex flex-col items-center justify-center gap-12 py-20">
-            <h2 className="font-raleway text-3xl font-bold">Proyectos</h2>
+            <h2 className="font-raleway text-4xl text-text font-bold">Proyectos</h2>
             <div className="flex gap-20 flex-col lg:flex-row">
                 
                 <Link to="/ux-project" className="flex flex-col w-96 h-auto bg-background shadow-xl rounded-md hover:shadow-primary transition duration-300">

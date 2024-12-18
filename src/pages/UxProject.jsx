@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const UxProject = () => {
     const projects = [
         {
-            title: "TicTeams",
+            title: "TicTeams Panamá",
             imgSrc: "/asset/cover-ticteams.png",
             altText: "Diseño UX/UI para Ticteams, empresa de desarrollo de software Panamá",
             description: "Rediseño de página web para Ticteams, empresa de Desarrollo de Software ",

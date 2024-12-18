@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 const AboutSection = () => {
-    // Ruta del CV
+  
     const downloadCv = '/public/asset/Yeraldin Espinosa UX-UI.pdf';
     const imgAbout = '/public/asset/rb_28004 1.png'
 
     return (
         <>
             <section id="aboutme-section" className="flex flex-col bg-secondary justify-center items-center py-20">
-                <h2 className="font-raleway font-bold text-3xl">Acerca de mí</h2>
+                <h2 className="font-raleway font-bold text-4xl text-text">Acerca de mí</h2>
                 <div className="flex flex-col max-w-screen-lg py-6 items-center justify-center gap-8 lg:flex-row" id="about-me-container">
                     <div className="flex flex-col px-10 " id="about-me-textcontainer">
                         <p className="pb-8 text-text text-xl">
@@ -30,7 +30,7 @@ const AboutSection = () => {
                             
                         </div>
                     </div>
-                    <img className="w-96 drop-shadow-xl" src={imgAbout} alt="" />
+                    <img className="w-96 drop-shadow-xl" src="/public/asset/rb_28004 1.png" alt="" />
                 </div>
             </section>
         </>
