@@ -30,7 +30,7 @@ const About = () => {
                 <a
                                 href={downloadCv}
                                 download="CV-YeraldinEspinosa.pdf" 
-                                className="bg-primary w-40 py-2 text-background rounded-md mr-4 shadow-sm shadow-text transition duration-300 hover:bg-text"
+                                className="bg-primary w-40 py-2 text-center text-background rounded-md mr-4 shadow-sm shadow-text transition duration-300 hover:bg-text"
                             >
                                 Descargar CV
                             </a>
