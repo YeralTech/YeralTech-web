@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 const AboutSection = () => {
   
     const downloadCv = '/public/asset/Yeraldin Espinosa UX-UI.pdf';
-    const imgAbout = '/public/asset/rb_28004 1.png'
+
 
     return (
         <>

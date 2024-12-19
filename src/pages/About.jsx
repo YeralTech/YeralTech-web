@@ -10,7 +10,7 @@ import { FaGitAlt } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiAdobexd } from "react-icons/si";
-
+const downloadCv = '/public/asset/Yeraldin Espinosa UX-UI.pdf';
 
 const About = () => {
   return (
@@ -27,7 +27,13 @@ const About = () => {
                
                
                 <div id="buttons-container" className="flex">
-                    <button className="bg-primary w-40 py-2 text-background rounded-md mr-4 shadow-sm shadow-text transition duration-300 hover:bg-text">Descargar CV</button>
+                <a
+                                href={downloadCv}
+                                download="CV-YeraldinEspinosa.pdf" 
+                                className="bg-primary w-40 py-2 text-background rounded-md mr-4 shadow-sm shadow-text transition duration-300 hover:bg-text"
+                            >
+                                Descargar CV
+                            </a>
                    
                 </div>
             </div>
