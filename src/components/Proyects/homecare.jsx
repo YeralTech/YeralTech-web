@@ -4,7 +4,7 @@ const HomeCare = () => {
     <>
         <section className='flex justify-center bg-homelg items-center '>
                     <div className='w-auto  flex justify-center items-center'>
-                    <img className='h-full px-10' src="../../../public/asset/cover-homecare.png" alt="" />
+                    <img className='h-full px-10' src="/asset/cover-homecare.png" alt="" />
                     </div>
         </section> 
         <section className="flex py-10 gap-10 justify-center items-center bg-homelg ">
@@ -54,35 +54,35 @@ const HomeCare = () => {
             </div>
         
         <div className="flex flex-col text-shaik font-bold text-2xl gap-8 max-w-screen-lg justify-center items-center ">
-                <img className="user person- Juan" src="../../../public/asset/user journey.png" alt="" />
+                <img className="user person- Juan" src="/asset/user journey.png" alt="" />
             </div>
             </div>
         </section>
         <section className="flex flex-col font-bold bg-homelg  justify-center items-center py-20">
         <h2 className="text-3xl pb-10">Arquitectura de la información</h2>
         <div className="flex font-bold  max-w-screen-lg justify-center items-center ">
-                <img className="w-auto" src="../../../public/asset/arqui-home.png" alt="" />
+                <img className="w-auto" src="/asset/arqui-home.png" alt="" />
                
             </div>
         </section>
         <section className="flex flex-col font-bold bg-bghome justify-center items-center py-20">
         <div className="flex font-bold  max-w-screen-lg justify-center items-center ">
-                <img className="w-auto" src="../../../public/asset/userf-home1.png" alt="" />
+                <img className="w-auto" src="/asset/userf-home1.png" alt="" />
                
             </div>
         </section>
         <section className="flex flex-col font-bold bg-homelg justify-center items-center py-20">
         <h2 className="text-3xl pb-10">Wireframe</h2>
         <div className="flex font-bold  max-w-screen-lg justify-center items-center ">
-                <img className="w-auto" src="../../../public/asset/wireframe-home.png" alt="" />
+                <img className="w-auto" src="/asset/wireframe-home.png" alt="" />
                
             </div>
         </section>
         <section className="flex flex-col font-bold bg justify-center items-center py-20">
         <h2 className="text-3xl pb-20">Mockup</h2>
         <div className="flex flex-col gap-20 font-bold  max-w-screen-lg justify-center items-center ">
-                <img className="w-auto " src="../../../public/asset/image 10.png" alt="" />
-                <img className="w-auto" src="../../../public/asset/image 11.png" alt="" />
+                <img className="w-auto " src="/asset/image 10.png" alt="" />
+                <img className="w-auto" src="/asset/image 11.png" alt="" />
             </div>
         </section>
 

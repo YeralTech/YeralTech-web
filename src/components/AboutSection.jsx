@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 const AboutSection = () => {
   
-    const downloadCv = '/public/asset/Yeraldin Espinosa UX-UI.pdf';
+    const downloadCv = '/asset/Yeraldin Espinosa UX-UI.pdf';
 
 
     return (
@@ -30,7 +30,7 @@ const AboutSection = () => {
                             
                         </div>
                     </div>
-                    <img className="w-96 drop-shadow-xl" src="/public/asset/rb_28004 1.png" alt="" />
+                    <img className="w-96 drop-shadow-xl" src="/asset/rb_28004 1.png" alt="" />
                 </div>
             </section>
         </>

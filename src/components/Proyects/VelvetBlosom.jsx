@@ -74,7 +74,7 @@ const VelvetBlossom = () => {
         </section>
         <section className="flex flex-col justify-center items-center py-20">
           <h2 className="text-2xl font-bold text-text pb-6">Wireframe Alta Fidelidad</h2>
-          <img className="px-60" src="/asset/" alt="" />
+          <img className="px-60" src="/asset/Group 25.png" alt="" />
         </section>
         <Footer/>  
     </>

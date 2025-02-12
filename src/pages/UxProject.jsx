@@ -12,7 +12,7 @@ const UxProject = () => {
         },
         {
             title: "Home Care",
-            imgSrc: "/public/asset/cover-homecare.png",
+            imgSrc: "/asset/cover-homecare.png",
             altText: "Diseño UX/UI para Home Care, empresa de cuidado de adultos mayores",
             description: "Diseño para aplicación Home Care, empresa de cuidado de adultos mayores",
             projectLink: "/homecare",

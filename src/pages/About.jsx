@@ -10,7 +10,7 @@ import { FaGitAlt } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiAdobexd } from "react-icons/si";
-const downloadCv = '/public/asset/Yeraldin Espinosa UX-UI.pdf';
+const downloadCv = '/asset/Yeraldin Espinosa UX-UI.pdf';
 
 const About = () => {
   return (
