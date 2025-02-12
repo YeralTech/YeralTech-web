@@ -11,6 +11,14 @@ const UxProject = () => {
             webLink:"https://ticteams.com/"
         },
         {
+            title: "Home Care",
+            imgSrc: "/public/asset/cover-homecare.png",
+            altText: "Diseño UX/UI para Home Care, empresa de cuidado de adultos mayores",
+            description: "Diseño para aplicación Home Care, empresa de cuidado de adultos mayores",
+            projectLink: "/homecare",
+            webLink:"https://www.figma.com/proto/bmEUKF9PnmOdL3Qmh3TvUQ/Untitled?page-id=0%3A1&node-id=1-252&viewport=-697%2C220%2C0.25&t=B2n48gNTkuF8HWVu-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A286"
+        },
+        {
             title: "App Velvet Blossom",
             imgSrc: "/asset/Frame 1.png",
             altText: "UX/UI Projects",
@@ -41,9 +49,9 @@ const UxProject = () => {
                     {projects.map((project, index) => (
                         <div key={index} className="project-card flex flex-col w-96 h-auto shadow-xl rounded-md cursor-pointer justify-center items-center pb-6 border-2 border-secondary">
                             <img src={project.imgSrc} alt={project.altText} className="h-60 rounded-md" />
-                            <h3 className="py-4 font-bold text-text text-center text-2xl">{project.title}</h3>
-                            <p className="py-4 text-text text-center text-base">{project.description}</p>
-                            <div className='gap-2 flex'>
+                            <h3 className=" font-bold text-text text-center text-2xl pt-4">{project.title}</h3>
+                            <p className="pt-4 text-text text-center text-sm">{project.description}</p>
+                            <div className='gap-2 flex py-4'>
                                 <Link to={project.webLink}>
                                 <button className="bg-primary w-auto px-3 py-2 text-background rounded-md shadow-sm shadow-text hover:bg-text transition duration-300">
                                     Ver Sitio Web

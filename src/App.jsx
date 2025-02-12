@@ -10,6 +10,7 @@ import FrontendProject from './pages/FrontendProject';
 import VelvetBlossom from './components/Proyects/VelvetBlosom';
 import ShaikProject from './components/Proyects/ShaikProyect';
 import TicteamsProject from './components/Proyects/Ticteams';
+import HomeCare from './components/Proyects/homecare';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/velvet-blossom" element={<VelvetBlossom />} />
         <Route path="/shaik-asesores" element={<ShaikProject />} />
         <Route path="/ticteams" element={<TicteamsProject />} />
+        <Route path="/homecare" element={<HomeCare />} />
       </Routes>
     </Router>
   );

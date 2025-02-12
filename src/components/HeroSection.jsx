@@ -8,7 +8,7 @@ const HeroSection = () => {
     return (
         <section
   id="hero-section"
-  className="bg-secondary  text-text flex items-center justify-center gap-12 flex-col lg:flex-row lg:py-16"
+  className="bg-secondary  text-text flex items-center justify-center gap-12 flex-col lg:flex-row lg:py-6"
 >
   <div className="bg-secondary flex flex-col items-center justify-center gap-12 py-8 px-10 lg:px-0 max-w-screen-xl mx-auto lg:flex-row">
   <div id="hero-text" className="flex flex-col justify-left   lg:w-1/2 xl:w-1/2 py-10">
@@ -33,11 +33,11 @@ const HeroSection = () => {
   </div>
 
   <div id="hero-image-container" className="relative w-full lg:w-1/4">
-    <div id="hero-image-overlay" className="w-60  absolute inset-0 bg-primary opacity-50 blur-lg rounded-full  top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+    <div id="hero-image-overlay" className="w-60 h-64 absolute  inset-0 bg-primary opacity-50 blur-lg rounded-full  top-32 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
     <img
       id="hero-image"
-      className="rounded-full relative z-10 border-2 border-primary w-60 top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-      src="/asset/image0-nA2741fkc-transformed.png"
+      className="rounded-full relative z-10 border-primary w-80 top-32 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      src="/public/asset/5-removebg-preview (2).png"
       alt="Yeraldin Espinosa - Diseñadora UX/UI en Panamá"
     />
   </div>

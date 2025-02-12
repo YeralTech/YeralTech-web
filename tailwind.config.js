@@ -17,7 +17,10 @@ export default {
         stext: '#FFCE4A',
         tic:'#114E50',
         bgtic:'#0C7679',
-        bglight: 'rgba(12, 118, 121, 0.12)'
+        bglight: 'rgba(12, 118, 121, 0.12)',
+
+        bghome:'#C8DFFF',
+        homelg: '#F2F8FF',
        
       },
       backgroundImage: {
