@@ -17,8 +17,8 @@ const HomeCare = () => {
             </div>
         </section>
        
-        <section className="flex bg- justify-center items-center py-20 px-10">
-        <div className="flex gap-8 max-w-screen-lg justify-center items-center px-6 flex-col lg:flex-col">
+       <section className="flex bg- justify-center items-center py-20 px-10">
+      {/*}   <div className="flex gap-8 max-w-screen-lg justify-center items-center px-6 flex-col lg:flex-col">
             <div className="flex-row py-4">
             <h2 className="text-3xl font-bold pb-2"> Investigación y Análisis Inicial </h2>
                 <p className="text-md text-justify">Para entender los problemas y oportunidades para crear la app Home Care, se realizo una evaluación para  identificar áreas críticas que impactan la experiencia del usuario, en este caso, enfermeros que necesitan una herramienta intuitiva y eficiente para gestionar sus actividades diarias.</p>
@@ -44,6 +44,7 @@ const HomeCare = () => {
             
             </div>
         </section>
+            /**/}
         <section className="flex bg-bghome justify-center items-center py-10 px-10">
         <div className="flex gap-8 max-w-screen-lg justify-center items-center px-6 flex-col lg:flex-col">
             <div className="flex-row ">
@@ -52,7 +53,7 @@ const HomeCare = () => {
                 <p className="text-md text-justify pt-2"><strong>Persona: </strong>Ana es enfermera y trabaja para Home care, ella trabaja turnos de mañana y maneja una carga de 8 pacientes por turno. Necesita una herramienta fácil de usar que optimice su tiempo y con la que pueda llevar un registro detallado de sus pacientes. </p>
                 <p className="pt-4"><strong>Contexto:</strong> Ana comienza su turno necesita ver sus tareas pendientes y registrar un nuevo paciente.</p>
             </div>
-        
+           
         <div className="flex flex-col text-shaik font-bold text-2xl gap-8 max-w-screen-lg justify-center items-center ">
                 <img className="user person- Juan" src="/asset/user journey.png" alt="" />
             </div>
