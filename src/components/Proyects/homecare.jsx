@@ -17,9 +17,9 @@ const HomeCare = () => {
             </div>
         </section>
        
-        <section className="flex bg- justify-center items-center py-10 px-10">
+        <section className="flex bg- justify-center items-center py-20 px-10">
         <div className="flex gap-8 max-w-screen-lg justify-center items-center px-6 flex-col lg:flex-col">
-            <div className="flex-row ">
+            <div className="flex-row py-4">
             <h2 className="text-3xl font-bold pb-2"> Investigación y Análisis Inicial </h2>
                 <p className="text-md text-justify">Para entender los problemas y oportunidades para crear la app Home Care, se realizo una evaluación para  identificar áreas críticas que impactan la experiencia del usuario, en este caso, enfermeros que necesitan una herramienta intuitiva y eficiente para gestionar sus actividades diarias.</p>
             </div>
