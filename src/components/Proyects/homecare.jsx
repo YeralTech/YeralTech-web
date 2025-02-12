@@ -23,16 +23,16 @@ const HomeCare = () => {
             <h2 className="text-3xl font-bold pb-2"> Investigación y Análisis Inicial </h2>
                 <p className="text-md text-justify">Para entender los problemas y oportunidades para crear la app Home Care, se realizo una evaluación para  identificar áreas críticas que impactan la experiencia del usuario, en este caso, enfermeros que necesitan una herramienta intuitiva y eficiente para gestionar sus actividades diarias.</p>
             </div>
-            <div className="flex gap-8 flex-col lg:flex-col"> 
-                <div className="flex flex-col gap-4 shadow-md p-4 rounded-md ">
+            <div className="flex  flex-col lg:flex-row justify-center   gap-10 w-auto px-10"> 
+                <div className="flex flex-col gap-4 shadow-lg p-4 rounded-md border-2 border-blue w-full">
                     <h3 className="bg-bghome text-blue py-2 px-4 font-bold">Problema Identificado:</h3>
                 
-                    <p>- La app carece de una sección de notificaciones, dificultando el seguimiento de tareas importantes y su estado.</p>
+                    <p >- La app carece de una sección de notificaciones, dificultando el seguimiento de tareas importantes y su estado.</p>
                     <p>- La información sobre los pacientes y sus estados no está detallada ni organizada de manera coherente.</p>
                     <p>- La aplicación actual no ofrece funcionalidad para registrar o gestionar tareas, lo que genera frustración y desmotivación en los usuarios.</p>
                     <p>- La interfaz es confusa y está mal organizada, lo que dificulta la navegación y el uso de la aplicación.</p>
                 </div>
-                <div className="flex flex-col gap-4 shadow-md p-4 rounded-md">
+                <div className="flex flex-col gap-4 shadow-md p-4 rounded-md w-full border-2 border-blue">
                     <h3 className="bg-bghome text-blue py-2 px-4 font-bold">Recomendación</h3>
                 
                     <p>- Integrar una sección de notificaciones categorizadas (alta, media, baja) para alertar a los usuarios sobre tareas pendientes y cambios relevantes, mejorando la visibilidad del estado del sistema.</p>
