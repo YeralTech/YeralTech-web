@@ -10,6 +10,20 @@ const HeroSection = () => {
   id="hero-section"
   className="bg-secondary  text-text flex items-center justify-center gap-12 flex-col lg:flex-row lg:py-6"
 >
+<table>
+    <tr>
+        <td>Falafel</td>
+        <td>$10.00</td>
+    </tr>
+    <tr>
+        <td>Pasta Salad</td>
+        <td>$12.00</td>
+    </tr>
+    <tr>
+        <td>Dessert</td>
+        <td>$8.00</td>
+    </tr>
+</table>
   <div className="bg-secondary flex flex-col items-center justify-center gap-12 py-8 px-10 lg:px-0 max-w-screen-xl mx-auto lg:flex-row">
   <div id="hero-text" className="flex flex-col justify-left   lg:w-1/2 xl:w-1/2 py-10">
     <h1 id="hero-title" className="font-raleway text-text text-5xl font-bold pb-4">
