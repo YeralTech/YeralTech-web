@@ -52,11 +52,12 @@ const UxProject = () => {
                             <h3 className=" font-bold text-text text-center text-2xl pt-4">{project.title}</h3>
                             <p className="pt-4 text-text text-center text-sm">{project.description}</p>
                             <div className='gap-2 flex py-4'>
-                                <Link to={project.webLink}>
-                                <button className="bg-primary w-auto px-3 py-2 text-background rounded-md shadow-sm shadow-text hover:bg-text transition duration-300">
-                                    Ver Sitio Web
-                                </button>
-                            </Link>
+                            <a href={project.webLink} target="_blank" rel="noopener noreferrer">
+    <button className="bg-primary w-auto px-3 py-2 text-background rounded-md shadow-sm shadow-text hover:bg-text transition duration-300">
+        Ver Sitio Web
+    </button>
+</a>
+
                             <Link to={project.projectLink}>
                                 <button className="bg-primary w-auto px-3 py-2 text-background rounded-md shadow-sm shadow-text hover:bg-text transition duration-300">
                                     Ver Caso de Estudio
