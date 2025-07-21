@@ -27,7 +27,7 @@ const projects = [
       "Diseño de aplicación móvil para gestión de citas médicas y seguimiento personalizado del paciente.",
     altText: "Diseño Aplicación Home Care",
     beforeImg: '../../../asset/wireframe-home.png',
-    afterImg: "../../../public/asset/image 10.png",
+    afterImg: "../../../asset/image 10.png",
     processSteps: [],
     tools: ["Figma", "UserTesting", "Zeplin"],
     results:

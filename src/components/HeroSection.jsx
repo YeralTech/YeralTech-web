@@ -38,7 +38,7 @@ const HeroSection = () => {
     <img
       id="hero-image"
       className="rounded-full relative z-10 border-primary w-80 top-32 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-      src="../../public/asset/Gemini_Generated_Image_rp7qkfrp7qkfrp7q.png"
+      src="../../asset/Gemini_Generated_Image_rp7qkfrp7qkfrp7q.png"
       alt="Yeraldin Espinosa - Diseñadora UX/UI en Panamá"
     />
   </div>
