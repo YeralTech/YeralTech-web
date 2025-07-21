@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import ProjectDetail from "./components/Proyects/ProjectDetail";
 import Navbar from './components/Navbar';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -9,7 +11,7 @@ import UxProject from './pages/UxProject'; // Asegúrate de importar el componen
 import FrontendProject from './pages/FrontendProject';
 import VelvetBlossom from './components/Proyects/VelvetBlosom';
 import ShaikProject from './components/Proyects/ShaikProyect';
-import TicteamsProject from './components/Proyects/Ticteams';
+import TicteamsProject from './components/Proyects/ProjectDetail';
 import HomeCare from './components/Proyects/homecare';
 
 function App() {
@@ -27,9 +29,15 @@ function App() {
         <Route path="/shaik-asesores" element={<ShaikProject />} />
         <Route path="/ticteams" element={<TicteamsProject />} />
         <Route path="/homecare" element={<HomeCare />} />
+
+        <Route path="/projects/:id" element={<ProjectDetail />} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
+
+
+
+

@@ -1,40 +1,39 @@
-import { Link } from 'react-router-dom';
 const AboutSection = () => {
-  
-    const downloadCv = '/asset/Yeraldin Espinosa UX-UI.pdf';
+  return (
+    <section id="about" className="px-6 py-20 bg-p200">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6">
 
+        {/* Imagen con fondo borroso decorativo */}
+        <div className="relative w-full md:w-1/2 flex justify-center items-center">
+          {/* Círculo decorativo borroso */}
 
-    return (
-        <>
-            <section id="aboutme-section" className="flex flex-col bg-secondary justify-center items-center py-20">
-                <h2 className="font-raleway font-bold text-4xl text-text">Acerca de mí</h2>
-                <div className="flex flex-col max-w-screen-lg py-6 items-center justify-center gap-8 lg:flex-row" id="about-me-container">
-                    <div className="flex flex-col px-10 " id="about-me-textcontainer">
-                        <p className="pb-8 text-text text-xl">
-                            Soy diseñadora UX/UI apasionada por crear experiencias digitales intuitivas y funcionales. Mi formación en herramientas de diseño como Figma, junto con mi experiencia previa en ventas, me ha permitido desarrollar habilidades clave en comunicación y resolución de problemas, lo que me facilita comprender las necesidades de los usuarios y colaborar eficazmente con equipos multidisciplinarios.
-                        </p>
-                     
-                        <div id="buttons-container" className="flex text-center">
-                            <a
-                                href={downloadCv}
-                                download="CV-YeraldinEspinosa.pdf" 
-                                className="bg-primary w-40 py-2 text-background rounded-md mr-4 shadow-sm shadow-text transition duration-300 hover:bg-text"
-                            >
-                                Descargar CV
-                            </a>
-                           <Link to="/About">
-                           <button  className="border-2 border-primary w-52 py-2 text-text rounded-md shadow-sm shadow-text transition duration-300 hover:bg-text hover:text-background">
-                                Descubre más de mí
-                            </button>
-                           </Link>
-                            
-                        </div>
-                    </div>
-                    <img className="w-96 drop-shadow-xl" src="/asset/rb_28004 1.png" alt="" />
-                </div>
-            </section>
-        </>
-    );
+          <div className="absolute w-80 h-64 bg-primary/60 rounded-full blur-2xl z-0" />
+         
+          {/* Imagen encima */}
+          <img
+            src="/asset/5-removebg-preview (2).png"
+            alt="Yeraldin Espinosa UX/UI Designer"
+            className="relative rounded-full w-80  object-cover z-10"
+          />
+        </div>
+
+        {/* Texto */}
+        <div className="w-full md:w-1/2">
+          <h2 className="text-2xl font-semibold mb-4 text-text text-raleway ">Sobre mí</h2>
+          <p className="text-gray-600  text-sans text-md leading-relaxed">
+            Soy Yeraldin Espinosa, diseñadora UX/UI enfocada en crear interfaces claras y funcionales.
+            He trabajado en el rediseño de sitios web empresariales, en el diseño de aplicaciones móviles
+            para servicios financieros, y en plataformas orientadas a mejorar la experiencia de usuarios reales.
+          </p>
+          <p className="text-gray-600  text-sans text-md leading-relaxed mt-4">
+            Mi enfoque está basado en entender los flujos reales del negocio y traducirlos en pantallas que
+            reduzcan la fricción, mejoren el uso y ayuden a lograr conversiones. Uso herramientas como Figma,
+            Zeplin y Hotjar para alinear diseño con objetivos del cliente.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default AboutSection;

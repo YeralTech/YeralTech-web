@@ -1,98 +1,128 @@
-import React from 'react';
-import { useForm, ValidationError } from 
-'@formspree/react';
-import { FaCheckCircle } from "react-icons/fa";
+import { useState } from "react";
 
 const ContactSection = () => {
-  const [state, handleSubmit] = useForm("meoqenyb");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  if (state.succeeded) {
-    return <section id="form-section" className="py-20 flex justify-center items-center gap-8 max-w-screen-lg mx-auto">
-      <h2 className="font-bold text-5xl w-1/2">¡Lleva tu diseño al siguiente nivel! Contáctame.</h2> 
-      <div className='bg-text w-96 px-10 py-10 flex flex-col justify-center items-center  rounded-md font-sans shadow-xl '>
-      <FaCheckCircle className='text-5xl text-white pb-2 text-center' />
-      <p className='text-white text-2xl text-center'> ¡Tu solicitud se ha enviado exitosamente!</p>
-      </div>
-      
-      </section>
+  const [status, setStatus] = useState(null); // 'success', 'error', null
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus(null);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/yeraldinshaik@gmail.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    } finally {
+      setLoading(false);
     }
+  };
 
   return (
-    <section id="form-section" className="py-20 flex flex-col justify-center items-center gap-8 max-w-screen-lg mx-auto lg:flex-row">
-      <h2 className="font-bold text-5xl text-text text-center lg:w-1/2">¡Lleva tu diseño al siguiente nivel! Contáctame.</h2>
-      <form 
-        action="https://formspree.io/f/meoqenyb"
-        method="POST"
-        onSubmit={handleSubmit} 
-        className="bg-text w-96 px-10 py-10 flex flex-col justify-center rounded-md font-sans shadow-xl"
-      >
-        <h3 className="text-2xl text-background text-center pb-4 font-bold">Contacto</h3>
+    <section id="contact" className="px-6 py-16 bg-background">
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-3xl font-raleway font-semibold mb-6 text-center text-text">
+          Contáctame
+        </h2>
+        <p className="text-center text-lg text-gray-600 mb-10">
+          Completa el formulario y me pondré en contacto contigo.
+        </p>
 
-        <label className="text-background pb-1" htmlFor="name">
-          Nombre
-        </label>
-        <input
-          id="name"
-          type="text" 
-          name="name"
-          className="mb-4 pl-2 text-md py-2 text-base rounded-md"
-          required 
-        />
-        <ValidationError 
-          prefix="Nombre" 
-          field="name"
-          errors={state.errors}
-        />
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+              Nombre
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="w-full border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
 
-        <label className="text-background pb-1" htmlFor="email">
-          Email
-        </label>
-        <input
-          id="email"
-          type="email" 
-          name="email"
-          className="mb-4 pl-2 text-md py-2 text-base rounded-md"
-          required
-        />
-        <ValidationError 
-          prefix="Email" 
-          field="email"
-          errors={state.errors}
-        />
+          <div>
+            <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+              Correo electrónico
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
 
-        <label className="text-background pb-1" htmlFor="asunto">
-          Asunto
-        </label>
-        <input
-          id="asunto"
-          type="text" 
-          name="asunto"
-          className="mb-4 pl-2 text-md py-2 text-base rounded-md"
-          required 
-        />
-        <ValidationError 
-          prefix="Asunto" 
-          field="asunto"
-          errors={state.errors}
-        />
+          <div>
+            <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+              Mensaje
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              className="w-full border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+            ></textarea>
+          </div>
 
-        <label className="text-background pb-1" htmlFor="message">Mensaje</label>
-        <textarea
-          id="message"
-          name="message"
-          className="mb-4 h-24 pl-2 text-md py-2 text-base rounded-md"
-          required
-        />
-        <ValidationError 
-          prefix="Mensaje" 
-          field="message"
-          errors={state.errors}
-        />
-        
-        <button type="submit" disabled={state.submitting} className="bg-secondary mt-4 rounded-md py-2 shadow-sm shadow-text transition duration-300 hover:bg-hover hover:text-background">
-          Enviar
-        </button>
-      </form>
+          <button
+            type="submit"
+            disabled={loading}
+            className="bg-primary text-white px-6 py-3 rounded-full hover:bg-hover transition-all disabled:opacity-50"
+          >
+            {loading ? "Enviando..." : "Enviar mensaje"}
+          </button>
+        </form>
+
+        {status === "success" && (
+          <p className="mt-6 text-green-600 font-semibold text-center">
+            ¡Mensaje enviado correctamente!
+          </p>
+        )}
+        {status === "error" && (
+          <p className="mt-6 text-red-600 font-semibold text-center">
+            Ocurrió un error al enviar el mensaje. Intenta de nuevo.
+          </p>
+        )}
+      </div>
     </section>
   );
 };

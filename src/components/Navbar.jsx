@@ -1,91 +1,146 @@
-import { useState, useRef, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useState } from "react";
 
 const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const dropdownRef = useRef(null);
 
-  const toggleDropdown = () => setDropdownOpen((prev) => !prev);
-
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
-
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setDropdownOpen(false);
-    }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setMenuOpen(false); // cerrar menú si estaba abierto
   };
 
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  const addMeet = "https://calendly.com/yeraldinespinosa/reunion-30-min";
 
-  const whatsapp = 'https://wa.link/545ctg';
-  const openWhatsapp = () => window.open(whatsapp, '_blank');
+  const AddMeetClick = () => {
+    window.open(addMeet, "_blank");
+    setMenuOpen(false); // cerrar menú si estaba abierto
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
-    <nav id="navbar" className="flex items-center justify-between py-4 px-8 lg:px-0 max-w-screen-lg mx-auto text-lg">
-      <NavLink to="/" className={({ isActive }) => (isActive ? 'text-primary font-bold' : 'text-text')}>
-      <img className="w-40 h-auto" src="/asset/logo.png" alt="logo Yeraldin" />
-
-      </NavLink>
-
-     
-      <button
-        onClick={toggleMenu}
-        className="lg:hidden text-text focus:outline-none"
-      >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
+    <header className="fixed w-full top-0 z-50 bg-white shadow-sm px-6 py-4 flex justify-between items-center">
+      {/* Logo */}
+      <button className="w-24" onClick={scrollToTop} aria-label="Ir al inicio">
+        <img src="/asset/LOGO (1).png" alt="Logo" />
       </button>
 
+      {/* Menú escritorio */}
+      <nav className="space-x-6 text-md text-text hidden md:flex">
+        <a
+          href="#about"
+          className="hover:text-hover border-b-2 border-transparent hover:border-p300"
+        >
+          Sobre mí
+        </a>
+        <a
+          href="#services"
+          className="hover:text-hover border-b-2 border-transparent hover:border-primary"
+        >
+          Soluciones
+        </a>
+        <a
+          href="#projects"
+          className="hover:text-hover border-b-2 border-transparent hover:border-primary"
+        >
+          Proyectos
+        </a>
+        <a
+          href="#testimonials"
+          className="hover:text-hover border-b-2 border-transparent hover:border-primary"
+        >
+          Testimonios
+        </a>
+        <a
+          href="#contact"
+          className="hover:text-hover border-b-2 border-transparent hover:border-primary"
+        >
+          Contacto
+        </a>
+      </nav>
 
-      <ul
-        className={`${
-          menuOpen ? 'flex' : 'hidden'
-        } flex-col absolute top-16 w-80  text-center rounded-b-md py-2 bg-white shadow-md z-20 md:left-52 md:ml-36 lg:static lg:flex lg:flex-row lg:items-center lg:gap-2 lg:bg-transparent lg:shadow-none lg:w-auto`}
+      {/* Botón agenda escritorio */}
+      <button
+        id="hero-meeting-button"
+        onClick={AddMeetClick}
+        className="hidden md:block text-white bg-primary px-4 py-2 rounded-full hover:bg-hover"
+        aria-label="Agenda una cita de 30 minutos con Yeraldin Espinosa"
       >
-        <li className="text-text hover:text-primary transition duration-300 py-2 px-2">
-          <NavLink to="/about" className={({ isActive }) => (isActive ? 'text-primary underline' : 'text-text ')}>
-            Acerca de mí
-          </NavLink>
-        </li>
-        <li className="relative py-2 px-4">
-          <button
-            onClick={toggleDropdown}
-            className="text-text hover:text-primary transition duration-300 active:underline  focus:outline-none"
+        Agenda una reunión
+      </button>
+
+      {/* Botón menú hamburguesa móvil */}
+      <button
+        onClick={toggleMenu}
+        className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
+        aria-label="Abrir menú"
+      >
+        <span
+          className={`block h-0.5 w-full bg-text transition-transform duration-300 ${
+            menuOpen ? "rotate-45 translate-y-2" : ""
+          }`}
+        ></span>
+        <span
+          className={`block h-0.5 w-full bg-text transition-opacity duration-300 ${
+            menuOpen ? "opacity-0" : "opacity-100"
+          }`}
+        ></span>
+        <span
+          className={`block h-0.5 w-full bg-text transition-transform duration-300 ${
+            menuOpen ? "-rotate-45 -translate-y-2" : ""
+          }`}
+        ></span>
+      </button>
+
+      {/* Menú móvil desplegable */}
+      {menuOpen && (
+        <nav className="absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-4 md:hidden z-40">
+          <a
+            href="#about"
+            onClick={() => setMenuOpen(false)}
+            className="text-text hover:text-hover"
+          >
+            Sobre mí
+          </a>
+          <a
+            href="#services"
+            onClick={() => setMenuOpen(false)}
+            className="text-text hover:text-hover"
+          >
+            Soluciones
+          </a>
+          <a
+            href="#projects"
+            onClick={() => setMenuOpen(false)}
+            className="text-text hover:text-hover"
           >
             Proyectos
-          </button>
-          {dropdownOpen && (
-            <div ref={dropdownRef} className="absolute left-4 mt-2 w-48 bg-white shadow-md rounded-md z-10 ">
-              <NavLink to="ux-project" className="block px-4 py-2 text-text hover:bg-gray-200">
-                Proyectos UX
-              </NavLink>
-              <NavLink to="/frontend-project" className="block px-4 py-2 text-text hover:bg-gray-200">
-                Proyectos Frontend
-              </NavLink>
-            </div>
-          )}
-        </li>
-        <li className="py-2 px-4">
-          <button
-            onClick={openWhatsapp}
-            className="bg-primary text-background px-4 py-2 rounded shadow-sm shadow-text hover:bg-text hover:text-background transition duration-300"
+          </a>
+          <a
+            href="#testimonials"
+            onClick={() => setMenuOpen(false)}
+            className="text-text hover:text-hover"
+          >
+            Testimonios
+          </a>
+          <a
+            href="#contact"
+            onClick={() => setMenuOpen(false)}
+            className="text-text hover:text-hover"
           >
             Contacto
+          </a>
+          <button
+            onClick={AddMeetClick}
+            className="bg-primary text-white px-6 py-2 rounded-full hover:bg-hover"
+            aria-label="Agenda una cita de 30 minutos con Yeraldin Espinosa"
+          >
+            Agenda una reunión
           </button>
-        </li>
-      </ul>
-    </nav>
+        </nav>
+      )}
+    </header>
   );
 };
 
