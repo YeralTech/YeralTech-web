@@ -8,7 +8,7 @@ const projects = [
     imgBanner: "/asset/cover-ticteams.png",
     types: ["App", "Web", "UX/UI"],
     description:
-      "Proyecto de rediseño de la página web de TicTeams, enfocado en mejorar la experiencia del usuario y la estética visual.",
+      "Proyecto de rediseño de la página web de TicTeams, enfocado en mejorar la experiencia del usuario y la estética visual. Su sitio web anterior presentaba desafíos en cuanto a navegación, claridad en los servicios ofrecidos y experiencia del usuario en general.",
     altText: "Rediseño de Página Web TicTeams",
     beforeImg: "/asset/inicio-tic.png",
     afterImg: "/asset/inicio-newtic.png",
@@ -64,7 +64,7 @@ const ProjectDetail = () => {
         {/* Volver */}
         <button
           onClick={() => navigate(-1)}
-          className="text-primary hover:underline"
+          className="text-primary hover:underline self-start"
         >
           ← Volver a proyectos
         </button>
@@ -84,7 +84,7 @@ const ProjectDetail = () => {
             {project.link && (
               <button
                 onClick={() => window.open(project.link, "_blank")}
-                className="bg-primary text-white px-6 py-3 w-60 rounded-full hover:bg-hover transition"
+                className=" text-hover border border-hover px-6 m-4 py-2 w-60 rounded-full hover:bg-hover transition"
               >
                 Visitar sitio web
               </button>

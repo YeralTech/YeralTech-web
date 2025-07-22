@@ -1,139 +1,109 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    setMenuOpen(false); // cerrar menú si estaba abierto
+  // Cierra el menú móvil al navegar
+  const handleLinkClick = () => {
+    setMenuOpen(false);
   };
+
+  // Define los links del menú con texto y hash
+  const menuLinks = [
+    { to: "/#hero", label: "Inicio" },
+    { to: "/#services", label: "Servicios" },
+    { to: "/#projects", label: "Proyectos" },
+    { to: "/#about", label: "Sobre mí" },
+    { to: "/#contact", label: "Contacto" },
+  ];
 
   const addMeet = "https://calendly.com/yeraldinespinosa/reunion-30-min";
 
   const AddMeetClick = () => {
     window.open(addMeet, "_blank");
-    setMenuOpen(false); // cerrar menú si estaba abierto
-  };
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen(false);
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white shadow-sm px-6 py-4 flex justify-between items-center">
+    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 px-6 py-4 flex items-center justify-between">
       {/* Logo */}
-      <button className="w-24" onClick={scrollToTop} aria-label="Ir al inicio">
+      <Link
+        to="/"
+        className="w-24"
+        onClick={() => {
+          setMenuOpen(false);
+          // Scroll top manual si ya estás en home
+          if (location.pathname === "/") window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+        aria-label="Ir al inicio"
+      >
         <img src="/asset/LOGO (1).png" alt="Logo" />
-      </button>
+      </Link>
 
-      {/* Menú escritorio */}
-      <nav className="space-x-6 text-md text-text hidden md:flex">
-        <a
-          href="#about"
-          className="hover:text-hover border-b-2 border-transparent hover:border-p300"
-        >
-          Sobre mí
-        </a>
-        <a
-          href="#services"
-          className="hover:text-hover border-b-2 border-transparent hover:border-primary"
-        >
-          Soluciones
-        </a>
-        <a
-          href="#projects"
-          className="hover:text-hover border-b-2 border-transparent hover:border-primary"
-        >
-          Proyectos
-        </a>
-        <a
-          href="#testimonials"
-          className="hover:text-hover border-b-2 border-transparent hover:border-primary"
-        >
-          Testimonios
-        </a>
-        <a
-          href="#contact"
-          className="hover:text-hover border-b-2 border-transparent hover:border-primary"
-        >
-          Contacto
-        </a>
+      {/* Menu escritorio */}
+      <nav className="hidden md:flex space-x-8 text-gray-800 text-lg ">
+        {menuLinks.map(({ to, label }) => (
+          <Link
+            key={label}
+            to={to}
+            className="hover:text-primary border-b-2 border-transparent hover:border-primary transition"
+            onClick={handleLinkClick}
+          >
+            {label}
+          </Link>
+        ))}
       </nav>
 
-      {/* Botón agenda escritorio */}
+      {/* Botón Agenda escritorio */}
       <button
-        id="hero-meeting-button"
         onClick={AddMeetClick}
-        className="hidden md:block text-white bg-primary px-4 py-2 rounded-full hover:bg-hover"
+        className="hidden md:inline-block bg-primary text-white px-5 py-2 rounded-full hover:bg-primary-dark transition"
         aria-label="Agenda una cita de 30 minutos con Yeraldin Espinosa"
       >
         Agenda una reunión
       </button>
 
-      {/* Botón menú hamburguesa móvil */}
+      {/* Botón hamburguesa móvil */}
       <button
-        onClick={toggleMenu}
+        onClick={() => setMenuOpen(!menuOpen)}
         className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
-        aria-label="Abrir menú"
+        aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
       >
         <span
-          className={`block h-0.5 w-full bg-text transition-transform duration-300 ${
+          className={`block h-0.5 w-full bg-gray-800 transition-transform duration-300 ${
             menuOpen ? "rotate-45 translate-y-2" : ""
           }`}
-        ></span>
+        />
         <span
-          className={`block h-0.5 w-full bg-text transition-opacity duration-300 ${
+          className={`block h-0.5 w-full bg-gray-800 transition-opacity duration-300 ${
             menuOpen ? "opacity-0" : "opacity-100"
           }`}
-        ></span>
+        />
         <span
-          className={`block h-0.5 w-full bg-text transition-transform duration-300 ${
+          className={`block h-0.5 w-full bg-gray-800 transition-transform duration-300 ${
             menuOpen ? "-rotate-45 -translate-y-2" : ""
           }`}
-        ></span>
+        />
       </button>
 
       {/* Menú móvil desplegable */}
       {menuOpen && (
-        <nav className="absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-4 md:hidden z-40">
-          <a
-            href="#about"
-            onClick={() => setMenuOpen(false)}
-            className="text-text hover:text-hover"
-          >
-            Sobre mí
-          </a>
-          <a
-            href="#services"
-            onClick={() => setMenuOpen(false)}
-            className="text-text hover:text-hover"
-          >
-            Soluciones
-          </a>
-          <a
-            href="#projects"
-            onClick={() => setMenuOpen(false)}
-            className="text-text hover:text-hover"
-          >
-            Proyectos
-          </a>
-          <a
-            href="#testimonials"
-            onClick={() => setMenuOpen(false)}
-            className="text-text hover:text-hover"
-          >
-            Testimonios
-          </a>
-          <a
-            href="#contact"
-            onClick={() => setMenuOpen(false)}
-            className="text-text hover:text-hover"
-          >
-            Contacto
-          </a>
+        <nav className="absolute top-full left-0 w-full bg-white shadow-lg flex flex-col items-center py-6 space-y-6 md:hidden z-40">
+          {menuLinks.map(({ to, label }) => (
+            <Link
+              key={label}
+              to={to}
+              className="text-gray-800 text-xl font-semibold hover:text-primary"
+              onClick={handleLinkClick}
+            >
+              {label}
+            </Link>
+          ))}
           <button
             onClick={AddMeetClick}
-            className="bg-primary text-white px-6 py-2 rounded-full hover:bg-hover"
+            className="bg-primary text-white px-8 py-3 rounded-full hover:bg-primary-dark transition"
             aria-label="Agenda una cita de 30 minutos con Yeraldin Espinosa"
           >
             Agenda una reunión
