@@ -20,7 +20,15 @@ const projects = [
     imgSrc: "/asset/cover-homecare.png",
     altText: "diseño de aplicación Home Care",
   },
-  // otros proyectos aquí...
+   {
+    id: 3,
+    title: "Sistema de Ventas e Inventario (POS) - Sabores de Istmo",
+    types: ["UX/UI"],
+    description:
+      "Diseño de sistema para gestión de ventas, inventario y control de caja en tiempo real, optimizando procesos de punto de venta.",
+    imgSrc: "/public/asset/INVENTARIO/mockuuups-free-ipad-pro-mockup-on-textured-fabric-and-wooden-surface.jpeg",
+    altText: "Diseño de Sistema POS Sabores de Istmo",
+  },
 ];
 
 const ProjectsList = () => {

@@ -1,3 +1,97 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.latest-sales {
+  margin: 16px 0;
+}
+
+.sales-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.sale-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.sale-card:hover {
+  transform: scale(1.02);
+}
+
+.sale-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sale-info .icon {
+  font-size: 20px;
+}
+
+.sale-info .time,
+.sale-info .product {
+  font-size: 14px;
+}
+
+.sale-info .amount {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.details-btn {
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.view-all {
+  display: block;
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 10% auto;
+}
+
+.modal:not(.hidden) {
+  display: block;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .sale-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .details-btn {
+    margin-top: 8px;
+  }
+}
