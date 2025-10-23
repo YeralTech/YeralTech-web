@@ -10,14 +10,7 @@ const UxProject = () => {
             projectLink: "/ticteams",
             webLink:"https://ticteams.com/"
         },
-        {
-            title: "Home Care",
-            imgSrc: "/asset/cover-homecare.png",
-            altText: "Diseño UX/UI para Home Care, empresa de cuidado de adultos mayores",
-            description: "Diseño para aplicación Home Care, empresa de cuidado de adultos mayores",
-            projectLink: "/homecare",
-            webLink:"https://www.figma.com/proto/bmEUKF9PnmOdL3Qmh3TvUQ/Untitled?page-id=0%3A1&node-id=1-252&viewport=-697%2C220%2C0.25&t=B2n48gNTkuF8HWVu-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A286"
-        },
+       
         {
             title: "App Velvet Blossom",
             imgSrc: "/asset/Frame 1.png",

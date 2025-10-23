@@ -2,26 +2,9 @@ import { FiSmartphone, FiGlobe, FiLayers } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
 const projects = [
-  {
-    id: 1,
-    title: "Rediseño Página Web - TicTeams",
-    types: ["App", "Web", "UX/UI"],
-    description:
-      "Proyecto de rediseño de la página web de TicTeams, enfocada en mejorar la experiencia del usuario y la estética visual.",
-    imgSrc: "/asset/cover-ticteams.png",
-    altText: "Rediseño de Página Web TicTeams",
-  },
-  {
-    id: 2,
-    title: "Diseño de Aplicación - Home Care",
-    types: ["App", "Web", "UX/UI"],
-    description:
-      "Diseño de aplicación móvil para gestión de citas médicas y seguimiento personalizado del paciente.",
-    imgSrc: "/asset/cover-homecare.png",
-    altText: "diseño de aplicación Home Care",
-  },
+
    {
-    id: 3,
+    id: 1,
     title: "Sistema de Ventas e Inventario (POS) - Sabores de Istmo",
     types: ["UX/UI"],
     description:
@@ -29,6 +12,25 @@ const projects = [
     imgSrc: "/asset/INVENTARIO/mockuuups-free-ipad-pro-mockup-on-textured-fabric-and-wooden-surface.jpeg",
     altText: "Diseño de Sistema POS Sabores de Istmo",
   },
+    {
+    id: 2,
+    title: "Rediseño Página Web - Aceti-Oxigeno",
+    types: ["UX/UI"],
+    description:
+      "Aceti-Oxígeno, con más de 75 años en la industria de gases medicinales e industriales en Panamá, necesitaba rediseñar su sitio web para transmitir solidez y confianza, y a la vez facilitar la experiencia de los usuarios en la búsqueda de productos, servicios y sucursales.",
+    imgSrc: "/public/asset/INVENTARIO/mockuuups-macbook-pro-mockup-on-a-table-with-a-plant-in-the-background.jpeg",
+    altText: "Diseño de Sistema POS Sabores de Istmo",
+  },
+    {
+    id: 4,
+    title: "Rediseño Página Web - TicTeams",
+    types: ["App", "Web", "UX/UI"],
+    description:
+      "Proyecto de rediseño de la página web de TicTeams, enfocada en mejorar la experiencia del usuario y la estética visual.",
+    imgSrc: "/asset/cover-ticteams.png",
+    altText: "Rediseño de Página Web TicTeams",
+  },
+
 ];
 
 const ProjectsList = () => {
